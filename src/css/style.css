@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(220, 13%, 18%);
+    color: hsl(218, 13%, 88%);
+    font-family: 'FiraCode Nerd Font', sans-serif;
+    font-size: 1rem;
+}
+.version{
+    font-weight: bold;
+}
+main{
+    display: inline-block;
+    height: 100dvh;
+    width: 100dvw;
+    padding: 1rem;
+}
+.intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+.art, .name{
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+}
+.art{
+    font-size: .7rem;
+}
+.name{
+    font-size: 1rem;
+}
+.terminal{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem .5rem;
+}
+.command{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .5rem 0;
+}
