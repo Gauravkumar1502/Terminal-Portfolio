@@ -1,6 +1,14 @@
 const commandContainer = document.getElementsByClassName("terminal")[0];
 let commandInput;
 
+function getTime(date) {
+  const hours = date.getHours() % 12;
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const meridian = hours >= 12 ? 'PM' : 'AM';
+  return `${hours}:${minutes}:${seconds} ${meridian}`;
+}
+
 function addCommand() {
   let Command = document.createElement("div");
   Command.classList.add("command");
@@ -13,7 +21,7 @@ function addCommand() {
       <span class="path">~</span>
     </div>
     <div>
-      <span class="time">   15:25:53 </span>
+      <span class="time">   ${getTime(new Date())} </span>
     </div>
   </div>
   <div class="line2">
@@ -24,13 +32,9 @@ function addCommand() {
   commandContainer.appendChild(Command);
   commandInput = document.getElementById("command_input");
   commandInput.focus();
-  console.log(commandInput.scrollHeight);
   commandInput.style.height = "auto";
   commandInput.addEventListener("keyup", (event) => {
-  console.log("1");
     if (event.keyCode === 13) {
-      console.log(commandInput.value);
-      console.log(commandInput.value.split(" "));
       commandInput.readOnly = true;
       commandInput.onkeydown = null;
       commandInput.removeAttribute("id");
@@ -39,5 +43,7 @@ function addCommand() {
     commandInput.style.height = commandInput.scrollHeight + "px";
   });
 }
+
+
 
 addCommand();
