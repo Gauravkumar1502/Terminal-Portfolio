@@ -15,32 +15,32 @@ function addCommand() {
   Command.innerHTML = `
   <div class="line1">
     <div>
-      <span class="os">╭─  </span>
-      <span class="user">guest@ </span>
-      <span class="host">gaurav-services.com  </span>
+      <span class="os">╭─ </span>
+      <span class="user">guest@</span>
+      <span class="host">gaurav-services.com</span>
       <span class="path">~</span>
     </div>
     <div>
-      <span class="time">   ${getTime(new Date())} </span>
+      <span class="time">  ${getTime(new Date())}</span>
     </div>
   </div>
   <div class="line2">
-    <span class="user_type"> ╰─ $ </span>
-    <textarea class="command_input "id="command_input"></textarea>
+    <span class="user_type">╰─ $ </span>
+    <input type="text" class="command_input "id="command_input">
   </div>
   `;
   commandContainer.appendChild(Command);
   commandInput = document.getElementById("command_input");
   commandInput.focus();
-  commandInput.style.height = "auto";
+  // commandInput.style.height = "auto";
   commandInput.addEventListener("keyup", (event) => {
-    if (event.keyCode === 13) {
+    if (event.key === "Enter") {
       commandInput.readOnly = true;
-      commandInput.onkeydown = null;
+      // commandInput.onkeydown = null;
       commandInput.removeAttribute("id");
       addCommand();
     }
-    commandInput.style.height = commandInput.scrollHeight + "px";
+    // commandInput.style.height = commandInput.scrollHeight + "px";
   });
 }
 
