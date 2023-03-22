@@ -1,3 +1,9 @@
+import { Controller } from "./Controller.js";
+
+let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.querySelector("body")
+.setAttribute("class", isDark ? "dark-forest" : "light-vanilla");
+
 const commandContainer = document.getElementsByClassName("terminal")[0];
 let commandInput;
 
@@ -32,18 +38,35 @@ function addCommand() {
   commandContainer.appendChild(Command);
   commandInput = document.getElementById("command_input");
   commandInput.focus();
-  // commandInput.style.height = "auto";
-  commandInput.addEventListener("keyup", (event) => {
+  commandInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       commandInput.readOnly = true;
-      // commandInput.onkeydown = null;
+      console.log("in onLoad : "+commandInput.value);
+      if(commandInput.value.trim() != ""){
+        let controller = new Controller(commandInput.value.trim());
+        let output = document.createElement("div");
+        if(controller.error != ""){
+          let errorText = document.createElement("p");
+          errorText.classList.add("error");
+          errorText.innerHTML = controller.error;
+          output.appendChild(errorText);
+          Command.appendChild(output);
+          console.log(controller.error);
+        }else{
+          let outputText = document.createElement("p");
+          outputText.classList.add("result");
+          outputText.innerHTML = controller.output;
+          output.appendChild(outputText);
+          Command.appendChild(output);
+          console.log(controller.output);
+        }
+      }
       commandInput.removeAttribute("id");
       addCommand();
+      // remove previous event listener
+      commandInput.onkeydown = null;
     }
-    // commandInput.style.height = commandInput.scrollHeight + "px";
   });
 }
-
-
 
 addCommand();

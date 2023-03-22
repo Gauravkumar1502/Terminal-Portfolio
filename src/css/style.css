@@ -1,11 +1,4 @@
-/* colors variables */
-:root{
-    --color-background: hsl(220, 13%, 18%);
-    --color-text: hsl(218, 13%, 88%);
-    --color-terminal-text: hsl(27, 100%, 42%);
-    --color-caret: hsl(39, 100%, 71%);
-}
-
+@import "./themes.css";
 *{
     margin: 0;
     padding: 0;
@@ -42,16 +35,16 @@ main{
     font-weight: normal;
 }
 .keyword{
-    color: hsl(39, 100%, 71%);
+    color: var(--color-caret-Keyword);
     font-weight: normal;
-    text-shadow: 0 0 .3rem hsl(39, 100%, 71%);   
+    text-shadow: 0 0 .3rem var(--color-caret-Keyword);  
 }
 .terminal{
     display: flex;
     flex-direction: column;
     gap: 2vh;
 }
-.line1, .line2:not(:last-child){
+.line1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -70,7 +63,18 @@ span,.command_input{
     outline: none;
     font-weight: lighter;
     color: var(--color-text);
-    caret-color: var(--color-caret);
+    caret-color: var(--color-caret-Keyword);
+}
+.result, .error{
+    color: var(--color-text);
+    font-size: clamp(9px, 1vw, 24px);
+    font-weight: 80;
+}
+.result{
+    color: var(--color-text);
+}
+.error{
+    color: hsl(355, 65%, 65%);
 }
 @media (min-width: 1200px) {
     main {
