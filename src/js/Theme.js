@@ -51,7 +51,7 @@ export class Theme{
     list(){
         // list all the themes with new line
         this.output = `theme: list of themes:
-        ${this.listOfThemes.join("/n")}`;
+        ${this.listOfThemes.join("\n")}`;
     }
 
 }

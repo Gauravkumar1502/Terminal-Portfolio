@@ -41,22 +41,17 @@ function addCommand() {
   commandInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       commandInput.readOnly = true;
-      console.log("in onLoad : "+commandInput.value);
       if(commandInput.value.trim() != ""){
         let controller = new Controller(commandInput.value.trim());
         let output = document.createElement("div");
         if(controller.error != ""){
-          let errorText = document.createElement("p");
-          errorText.classList.add("error");
-          errorText.innerHTML = controller.error;
-          output.appendChild(errorText);
+          output.classList.add("error");
+          output.innerHTML = controller.error;
           Command.appendChild(output);
           console.log(controller.error);
         }else{
-          let outputText = document.createElement("p");
-          outputText.classList.add("result");
-          outputText.innerHTML = controller.output;
-          output.appendChild(outputText);
+          output.classList.add("output");
+          output.innerHTML = controller.output;
           Command.appendChild(output);
           console.log(controller.output);
         }

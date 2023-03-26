@@ -5,6 +5,12 @@
     --color-terminal-text: hsl(27, 100%, 42%);
     --color-caret-Keyword: hsl(39, 100%, 71%);
 }
+.dark-day{
+    --color-background: hsl(20, 10%, 12%);
+    --color-text: hsl(35, 40%, 54%);
+    --color-terminal-text: hsl(150, 31%, 46%);
+    --color-caret-Keyword: hsl(150, 36%, 54%);
+}
 .dark-ocean {
     --color-background: hsl(194, 100%, 4%);
     --color-text: hsl(218, 13%, 88%);
