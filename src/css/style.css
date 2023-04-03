@@ -31,7 +31,7 @@ main{
 .art, .name{
     font-family: 'Courier New', Courier, monospace;
     white-space: pre;
-    font-size: clamp(3px, .6vw, 14px);
+    font-size: clamp(4.3px, .6vw, 14px);
 }
 .help{
     white-space: pre-line;
