@@ -14,6 +14,7 @@ export class About{
         let output = document.createElement("div");
         output.classList.add("output");
         output.innerHTML = `<p style="white-space: pre-line;">${this.toString()}</p>`;
-        document.getElementsByClassName("command")[0].appendChild(output);
+        let commandElements = document.getElementsByClassName("command");
+        commandElements[commandElements.length - 1].appendChild(output);
     }
 }

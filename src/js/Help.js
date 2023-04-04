@@ -9,6 +9,7 @@ export class Help{
         let output = document.createElement("div");
         output.classList.add("output");
         output.innerHTML = this.toString();
-        document.getElementsByClassName("command")[0].appendChild(output);
+        let commandElements = document.getElementsByClassName("command");
+        commandElements[commandElements.length - 1].appendChild(output);
     }
 }

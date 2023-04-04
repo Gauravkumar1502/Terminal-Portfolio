@@ -1,4 +1,5 @@
 import { Controller } from "./Controller.js";
+import { History } from "./History.js";
 
 // set theme
 let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -7,6 +8,8 @@ document.querySelector("body")
 
 // get terminal element
 const terminal = document.getElementById("terminal");
+// create history object
+const history = new History();
 
 function addCommand() {
   let Command = document.createElement("div");
@@ -32,10 +35,11 @@ function addCommand() {
   let commandInput = document.getElementById("command_input");
   commandInput.focus();
 
-  commandInput.addEventListener("keydown", (event) => {    
+  commandInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       commandInput.readOnly = true;
       if(commandInput.value.trim() != ""){
+        history.add(commandInput.value.trim());
         let controller = new Controller(commandInput.value.trim());
         // let output = document.createElement("div");
         // if(controller.error != ""){
@@ -52,6 +56,10 @@ function addCommand() {
       commandInput.onkeydown = null;
       commandInput.removeAttribute("id");
       addCommand();
+    }else if(event.key === "ArrowUp"){
+      history.up();
+    }else if(event.key === "ArrowDown"){
+      history.down();
     }
   });
 }
