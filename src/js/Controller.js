@@ -1,6 +1,8 @@
 import {Theme} from "./Theme.js";
 import { About } from "./About.js";
 import { Help } from "./Help.js";
+import { History } from "./History.js";
+import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Controller{
     constructor(InputedCommand){ 
@@ -24,12 +26,12 @@ export class Controller{
             case "clear":
                 document.querySelector("#terminal").innerHTML = "";
                 break;
+            case "history":
+                new History().updateDOM();
+                break;
             default:
-                let output = document.createElement("div");
-                output.classList.add("error");
-                output.innerHTML = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
-                let commandElements = document.getElementsByClassName("command");
-                commandElements[commandElements.length - 1].appendChild(output);
+                let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
+                new UniversalFunction().updateElement("div", "error", errMsg);
                 break;
         }
     }

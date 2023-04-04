@@ -53,15 +53,16 @@ main{
     flex-direction: row;
     justify-content: space-between;
 }
-span,.command_input{
-    color: var(--color-terminal-text);
-    font-size: var(--font-size);
-}
 .line2{
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1rem;
 }
+.line1 span, .line2 span, .command_input{
+    color: var(--color-terminal-text);
+    font-size: var(--font-size);
+}
+
 .command_input{
     border: none;
     outline: none;
@@ -70,20 +71,14 @@ span,.command_input{
     color: var(--color-text);
     caret-color: var(--color-caret-Keyword);
 }
-.help-out {
+.two-col{
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
-.output p span{
-    font-size: var(--font-size);
-}
 .output, .error{
     font-weight: 80;
-    padding-top: 1vh;
+    padding: 1vh 0 1vh 2vw;
     font-size: var(--font-size);
-}
-.result{
-    color: var(--color-text);
 }
 .error{
     color: var(--color-error);

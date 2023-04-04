@@ -8,6 +8,7 @@ document.querySelector("body")
 
 // get terminal element
 const terminal = document.getElementById("terminal");
+
 // create history object
 const history = new History();
 

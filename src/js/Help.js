@@ -1,15 +1,29 @@
 import commands  from '../../data/Commands.json' assert { type: "json" };
+import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Help{
+    constructor(){
+        this.options = options;
+        // this.cmd = this.parseCommand();
+    }
+
+    // parseCommand(){
+    //     let parts = this.options.split(" ");
+    //     if(this.options !== ""){
+    //         console.log(this.options);
+    //         let errMsg = `help: too many arguments.<br>type 'help' for help.`;
+    //         new UniversalFunction().updateElement("div", "error", errMsg);
+    //         return;
+    //     }
+    //     this.updateDOM();
+    // }
+
     toString(){
-        return commands.map(command => `<p class="help-out"> <span class='keyword'>${command.name}
+        return commands.map(command => `<p class="two-col"> <span class='keyword'>${command.name}
         </span><span>${command.description}</span></p>`).join("");
     }
+
     updateDOM(){
-        let output = document.createElement("div");
-        output.classList.add("output");
-        output.innerHTML = this.toString();
-        let commandElements = document.getElementsByClassName("command");
-        commandElements[commandElements.length - 1].appendChild(output);
+        new UniversalFunction().updateElement("div", "output", this.toString());
     }
 }

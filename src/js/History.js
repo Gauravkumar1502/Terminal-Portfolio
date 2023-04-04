@@ -1,12 +1,15 @@
+import {UniversalFunction} from './UniversalFunction.js';
 export class History{
     constructor(){
-        this.history = [];
-        this.index = 0;
+        const historyData = localStorage.getItem('history');
+        this.history = historyData ? JSON.parse(historyData) : [];
+        this.index = this.history.length;
     }
 
     add(command){
         this.history.push(command);
         this.index++;
+        localStorage.setItem('history', JSON.stringify(this.history));
     }
 
     up(){
@@ -20,7 +23,20 @@ export class History{
             document.getElementById("command_input").value =(this.history[++this.index]);
         }
     }
+    
     resetIndex(){
         this.index = this.history.length;
+    }
+
+    toString(){
+        return '<p class="two-col"><span>Id</span><span>Command</span></p>' 
+        + this.history.map((command, index) => 
+            `<p class="two-col"><span>${index+1}</span><span>${command}</span></p>`
+        ).join('');
+    }
+
+    updateDOM(){
+        console.log(this.toString());
+        new UniversalFunction().updateElement("div", "output", this.toString());
     }
 }

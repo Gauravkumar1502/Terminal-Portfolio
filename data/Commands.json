@@ -3,6 +3,8 @@
     { "name": "about", "description": "Display information about me. 👨‍💻" },
     { "name": "whoami", "description": "The paradox of \"Who am I?\" is: we never know, but, we constantly find out. 🤔" },
     { "name": "clear", "description": "Clear the terminal. 🧹" },
+    {"name": "history", "description": "Display history of commands. 📜"},
+    {"name": "exit", "description": "Exit the terminal. 🚪"},
     { "name": "theme", "description": "Change the theme of the terminal.", 
         "options": [
             { "option": "--name [theme-name]", "description": "Change the theme to the given theme name." },
