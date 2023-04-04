@@ -20,4 +20,7 @@ export class History{
             document.getElementById("command_input").value =(this.history[++this.index]);
         }
     }
+    resetIndex(){
+        this.index = this.history.length;
+    }
 }

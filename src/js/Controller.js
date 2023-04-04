@@ -5,8 +5,6 @@ import { Help } from "./Help.js";
 export class Controller{
     constructor(InputedCommand){ 
         this.InputedCommand = InputedCommand;
-        this.error = "";
-        this.output = "";
         this.parseCommand();
     }
 
@@ -20,15 +18,18 @@ export class Controller{
                 new About().updateDOM();
                 break;
             case "theme":
-                let theme = new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
-                this.error = theme.error;
-                this.output = theme.output;
+                // create new theme object with the rest of the command
+                new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
             case "clear":
-                document.querySelector(".terminal").innerHTML = "";
+                document.querySelector("#terminal").innerHTML = "";
                 break;
             default:
-                this.error = `${cmd}: The term '${cmd}' is not recognized as a name of a command. \n type 'help' to see the list of commands.`;
+                let output = document.createElement("div");
+                output.classList.add("error");
+                output.innerHTML = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
+                let commandElements = document.getElementsByClassName("command");
+                commandElements[commandElements.length - 1].appendChild(output);
                 break;
         }
     }

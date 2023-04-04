@@ -41,20 +41,11 @@ function addCommand() {
       if(commandInput.value.trim() != ""){
         history.add(commandInput.value.trim());
         let controller = new Controller(commandInput.value.trim());
-        // let output = document.createElement("div");
-        // if(controller.error != ""){
-        //   output.classList.add("error");
-        //   output.textContent = controller.error;
-        //   Command.appendChild(output);
-        // }else{
-        //   output.classList.add("output");
-        //   output.innerHTML = controller.output;
-        //   Command.appendChild(output);
-        // }
       }
       // remove previous event listener
       commandInput.onkeydown = null;
       commandInput.removeAttribute("id");
+      history.resetIndex();
       addCommand();
     }else if(event.key === "ArrowUp"){
       history.up();
