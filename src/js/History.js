@@ -36,7 +36,6 @@ export class History{
     }
 
     updateDOM(){
-        console.log(this.toString());
         new UniversalFunction().updateElement("div", "output", this.toString());
     }
 }
