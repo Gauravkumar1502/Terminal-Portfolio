@@ -29,6 +29,9 @@ export class Controller{
             case "clear":
                 document.querySelector("#terminal").innerHTML = "";
                 break;
+            case "exit":
+                window.close();
+                break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
                 new UniversalFunction().updateElement("div", "error", errMsg);
