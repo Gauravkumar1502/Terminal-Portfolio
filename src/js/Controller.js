@@ -23,11 +23,11 @@ export class Controller{
                 // create new theme object with the rest of the command
                 new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
-            case "clear":
-                document.querySelector("#terminal").innerHTML = "";
-                break;
             case "history":
                 new History().updateDOM();
+                break;
+            case "clear":
+                document.querySelector("#terminal").innerHTML = "";
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;

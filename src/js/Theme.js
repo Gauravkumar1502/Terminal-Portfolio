@@ -11,7 +11,7 @@ export class Theme {
 
     parseCommand() {
         if (this.options === "") {
-            this.list();
+            this.list("");
             return;
         }
         let parts = this.options.split(" ");
@@ -25,10 +25,10 @@ export class Theme {
                 this.setTheme(parts[1]);
                 break;
             case "--list":
-                this.list(parts.slice(1));
+                this.list(parts.slice(1).toString());
                 break;
             case "--help":
-                this.help(parts.slice(1));
+                this.help(parts.slice(1).toString());
                 break;
             default:
                 let errMsg = `theme: '${parts[0]}' is not a valid argument.<br>type 'theme --help' for help.`;
