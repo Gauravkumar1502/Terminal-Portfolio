@@ -30,7 +30,7 @@ export class Controller{
                 document.querySelector("#terminal").innerHTML = "";
                 break;
             case "exit":
-                window.close();
+                window.open(location, '_self').close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
