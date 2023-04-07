@@ -31,6 +31,7 @@ export class Controller{
                 break;
             case "exit":
                 window.open(location, '_self').close();
+                window.close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
