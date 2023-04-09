@@ -2,6 +2,7 @@ import {Theme} from "./Theme.js";
 import { About } from "./About.js";
 import { Help } from "./Help.js";
 import { History } from "./History.js";
+import { Resume } from "./Resume.js";
 import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Controller{
@@ -29,9 +30,14 @@ export class Controller{
             case "clear":
                 document.querySelector("#terminal").innerHTML = "";
                 break;
+            case "resume":
+                new Resume().updateDOM();
+                break;
             case "exit":
-                window.open(location, '_self').close();
-                window.close();
+                new UniversalFunction().updateElement("div", "error", 
+                "Due to security reasons, you can't close this window using the 'exit' command.");
+                // window.open(location, '_self').close();
+                // window.close();
                 break;
             default:
                 let errMsg = `${cmd}: The term '${cmd}' is not recognized as a name of a command.<br>type 'help' to see the list of available commands.`;
