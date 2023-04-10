@@ -1,7 +1,9 @@
 export class UniversalFunction{
-    updateElement(elementTag, elementClass, elementContent){
+    updateElement(elementTag, elementClasses, elementContent){
         let element = document.createElement(elementTag);
-        element.classList.add(elementClass);
+        elementClasses.split(" ").forEach((className) => {
+            element.classList.add(className);
+        });
         element.innerHTML = elementContent;
         let commandElements = document.getElementsByClassName("command");
         commandElements[commandElements.length - 1].appendChild(element);
