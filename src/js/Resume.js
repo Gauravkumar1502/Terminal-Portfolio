@@ -66,13 +66,59 @@ ACHIEVEMENTS AND CERTIFICATIONS
 • 2nd Rank in Inter School Chess Competition 
 */
 export class Resume{
-    toString(){
-        return `<div class="resume"><h1>Gaurav Kumar</h1><hr>
-        <p>(+91) 9039351758 | gaurav.kumar.deve@gmail.com | <a href="https://github.com/Gauravkumar1502/Terminal-Portfolio">CLI-Portfolio</a> | <a href="https://github.com/Gauravkumar1502">GitHub</a> | <a href="https://www.linkedin.com/in/gaurav-kumar-1518281a4/">LinkedIn</a> | <a href="https://leetcode.com/GauravKumar15/">Leetcode</a></p><hr>
-        <h2>EDUCATION</h2>
+
+    getHeader(){
+        return `<div class="header"><h1>Gaurav Kumar</h1><hr>
+        <p>
+            <span><a href="tel:+919039351758">(+91) 9039351758</a> | </span>
+            <span><a href="mailto:gaurav.kumar.deve@gmail.com">gaurav.kumar.deve@gmail.com</a> | </span>
+            <span><a href="https://github.com/Gauravkumar1502/Terminal-Portfolio" target="_blank">CLI-Portfolio</a> | </span>
+            <span><a href="https://github.com/Gauravkumar1502" target="_blank">GitHub</a> | </span>
+            <span><a href="https://www.linkedin.com/in/gaurav-kumar-1518281a4/" target="_blank">LinkedIn</a> | </span>
+            <span><a href="https://leetcode.com/GauravKumar15/" target="_blank">Leetcode</a></span>
+        </p><hr>
         </div>`;
     }
+
+    getEducation(){
+        return `<div><h2>EDUCATION</h2><hr>
+        <div class="education">
+            <div class="education-item">
+                <h3>Chandigarh University</h3>
+                <p>Masters in Computer Application</p>
+                <p>Major : Cloud Computing and DevOps | Pursuing </p>
+                <p>Mohali, Punjab</p>
+                <p>October 2022–Present</p>
+            </div>
+            <div class="education-item">
+                <h3>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h3>
+                <p>Bachelor in Computer Application | 72.7 %</p>
+                <p>Durg, Chhattisgarh</p>
+                <p>July 2017–September 2020</p>
+            </div>
+            <div class="education-item">
+                <h3>Kendriya Vidyalaya</h3>
+                <p>12th | 66.4 %</p>
+                <p>Durg, Chhattisgarh</p>
+                <p>April 2016–March 2017</p>
+            </div>
+            <div class="education-item">
+                <h3>Kendriya Vidyalaya</h3>
+                <p>10th | 8 CGPA</p>
+                <p>Durg, Chhattisgarh</p>
+                <p>April 2014– March 2015</p>
+            </div>
+        </div>
+        </div>`;
+    }
+
+
+    toString(){
+        return `${this.getHeader()}
+        ${this.getEducation()}
+        `;
+    }
     updateDOM(){
-        new UniversalFunction().updateElement("div", "output", this.toString());
+        new UniversalFunction().updateElement("div", "output resume", this.toString());
     }
 }
