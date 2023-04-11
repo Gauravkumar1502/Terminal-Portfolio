@@ -78,7 +78,7 @@ main{
 }
 .output, .error{
     font-weight: 80;
-    padding: 1dvh 0 1dvh 2dvw;
+    padding: 1dvh 2dvw;
     font-size: var(--font-size);
 }
 .error{

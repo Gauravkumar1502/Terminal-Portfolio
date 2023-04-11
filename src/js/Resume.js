@@ -22,20 +22,20 @@ export class Resume{
                 <h2>EDUCATION</h2><hr>
             </div>
             <div class="education-item">
-                <h4>Chandigarh University</h4>  <h4>Mohali, Punjab</h4>
+                <strong>Chandigarh University</strong>  <strong>Mohali, Punjab</strong>
                 <p>Masters in Computer Application</p>  <p>October 2022–Present</p>
                 <p>Major : Cloud Computing and DevOps | Pursuing </p>
             </div>
             <div class="education-item">
-                <h4>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h4> <h3>Durg, Chhattisgarh</h3>
+                <strong>Swami Shri Swaroopanand Saraswati Mahavidyalaya</strong> <strong>Durg, Chhattisgarh</strong>
                 <p>Bachelor in Computer Application | 72.7 %</p> <p>July 2017–September 2020</p>
             </div>
             <div class="education-item">
-                <h4>Kendriya Vidyalaya</h4> <h4>Durg, Chhattisgarh</h4>
+                <strong>Kendriya Vidyalaya</strong> <strong>Durg, Chhattisgarh</strong>
                 <p>12th | 66.4 %</p> <p>April 2016–March 2017</p>
             </div>
             <div class="education-item">
-                <h4>Kendriya Vidyalaya</h4> <h4>Durg, Chhattisgarh</h4>
+                <strong>Kendriya Vidyalaya</strong> <strong>Durg, Chhattisgarh</strong>
                 <p>10th | 8 CGPA</p> <p>April 2014– March 2015</p>
             </div>
         </div>`;
@@ -47,11 +47,11 @@ export class Resume{
                 <h2>PROFESSIONAL EXPERIENCE</h2><hr>
             </div>
             <div class="professional-experience-item">
-                <h4>
+                <strong>
                     Software Developer Intern 
                     <a href="https://github.com/Gauravkumar1502/DCIPL-SERVER" target="_blank">[GitHub]</a> 
-                    <a href="https://drive.google.com/file/d/1ASF2FyjKZIxI896C7hCeIMmnsIAeH3ZM/view?usp=share_link" target="_blank">[Certificate]</a></h4> 
-                <h4>Mumbai (WFH)</h4>
+                    <a href="https://drive.google.com/file/d/1ASF2FyjKZIxI896C7hCeIMmnsIAeH3ZM/view?usp=share_link" target="_blank">[Certificate]</a></strong> 
+                <strong>Mumbai (WFH)</strong>
                 <p>Dc Ikigai Pvt. Lmt. </p> <p>May 2021-August 2021</p>
                 <ul>
                     <li>Worked on <strong>Investment Adviser</strong> Project which provides best investment plans and advice according to the user. 
@@ -75,9 +75,9 @@ export class Resume{
                 <h2>PROJECTS</h2><hr>
             </div>
             <div class="projects-item">
-                <h4>Personal Terminal Portfolio | HTML, CSS, JavaScript | 
+                <strong>Personal Terminal Portfolio | HTML, CSS, JavaScript | 
                     <a href="https://github.com/Gauravkumar1502/Terminal-Portfolio" target="_blank">[GitHub]</a>
-                </h4>
+                </strong>
                 <ul>                  
                     <li>Created this <strong>Personal Terminal-Inspired Portfolio</strong> to demonstrate my proficiency in <strong>backend development</strong>.</li>
                     <li>Used <strong>Local Storage</strong> to store list of commands.</li> 
@@ -86,9 +86,9 @@ export class Resume{
                 </ul>
             </div>
             <div class="projects-item">
-                <h4>Exam Report System | Java, MySQL, NetBeans | 
+                <strong>Exam Report System | Java, MySQL, NetBeans | 
                     <a href="https://github.com/Gauravkumar1502/JavaSwing/tree/main/JavaSwing/JavaGRProject" target="_blank">[GitHub]</a>
-                </h4>
+                </strong>
                 <ul>
                     <li>Created a system for generating and managing exam reports.</li>
                     <li>Developed a <strong>Swing</strong> application using <strong>Java</strong>.</li>
@@ -97,9 +97,9 @@ export class Resume{
                 </ul>
             </div>
             <div class="projects-item">
-                <h4>Blood Donation Camp Management System | Java, Oracle Database, NetBeans |
+                <strong>Blood Donation Camp Management System | Java, Oracle Database, NetBeans |
                     <a href="https://github.com/Gauravkumar1502/JavaSwing/tree/main/JavaSwing/Blood_Donation" target="_blank">[GitHub]</a>
-                </h4>
+                </strong>
                 <ul>
                     <li>Created a system for managing blood donation camps.</li>
                     <li>Developed a <strong>Swing</strong> application using <strong>Java</strong>.</li>
