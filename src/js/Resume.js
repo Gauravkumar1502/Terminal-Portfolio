@@ -81,34 +81,27 @@ export class Resume{
     }
 
     getEducation(){
-        return `<div><h2>EDUCATION</h2><hr>
-        <div class="education">
+        return `<div class="education">
+            <div>
+                <h2>EDUCATION</h2><hr>
+            </div>
             <div class="education-item">
-                <h3>Chandigarh University</h3>
-                <p>Masters in Computer Application</p>
+                <h3>Chandigarh University</h3>  <h3>Mohali, Punjab</h3>
+                <p>Masters in Computer Application</p>  <p>October 2022–Present</p>
                 <p>Major : Cloud Computing and DevOps | Pursuing </p>
-                <p>Mohali, Punjab</p>
-                <p>October 2022–Present</p>
             </div>
             <div class="education-item">
-                <h3>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h3>
-                <p>Bachelor in Computer Application | 72.7 %</p>
-                <p>Durg, Chhattisgarh</p>
-                <p>July 2017–September 2020</p>
+                <h3>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <p>Bachelor in Computer Application | 72.7 %</p> <p>July 2017–September 2020</p>
             </div>
             <div class="education-item">
-                <h3>Kendriya Vidyalaya</h3>
-                <p>12th | 66.4 %</p>
-                <p>Durg, Chhattisgarh</p>
-                <p>April 2016–March 2017</p>
+                <h3>Kendriya Vidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <p>12th | 66.4 %</p> <p>April 2016–March 2017</p>
             </div>
             <div class="education-item">
-                <h3>Kendriya Vidyalaya</h3>
-                <p>10th | 8 CGPA</p>
-                <p>Durg, Chhattisgarh</p>
-                <p>April 2014– March 2015</p>
+                <h3>Kendriya Vidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <p>10th | 8 CGPA</p> <p>April 2014– March 2015</p>
             </div>
-        </div>
         </div>`;
     }
 
