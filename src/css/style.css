@@ -12,8 +12,8 @@
     font-family: 'FiraCode Nerd Font', sans-serif, 'Courier New', Courier, monospace;
 }
 main{
-    height: 100dvh;
-    width: 100dvw;
+    /* height: 100dvh;
+    width: 100dvw; */
     display: flex;
     flex-direction: column;
     padding: 1rem;

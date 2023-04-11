@@ -1,74 +1,10 @@
 import { UniversalFunction } from "./UniversalFunction.js";
 
-/*
-Gaurav Kumar
-
-(+91) 9039351758 | gaurav.kumar.deve@gmail.com | CLI-Portfolio | GitHub | LinkedIn | Leetcode
-
-
-EDUCATION
-Chandigarh University
-Masters in Computer Application
-Major : Cloud Computing and DevOps | Pursuing 
-Mohali, Punjab
-October 2022–Present
-
-Swami Shri Swaroopanand Saraswati Mahavidyalaya
-Bachelor in Computer Application | 72.7 %
-Durg, Chhattisgarh
-July 2017–September 2020
-
-Kendriya Vidyalaya
-12th | 66.4 %
-Durg, Chhattisgarh
-April 2016–March 2017
-
-Kendriya Vidyalaya
-10th | 8 CGPA
-Durg, Chhattisgarh
-April 2014– March 2015
-
-
-PROFESSIONAL EXPERIENCE
-
-Software Developer Intern [GitHub] [Certificate]
-Dc Ikigai Pvt. Lmt. 
-• Worked on Investment Adviser Project which provides best investment plans and 
-advice according to the user. In this project my responsibility was to develop a 
-module to get user data from user and store in SQL and perform given criteria to 
-return the best Investment plan
-• Web scraping for retrieving stock prices using Puppeteer. [GitHub]
-• And try to implement the Web Scraping in a ChatBot. [GitHub]
-Mumbai (WFH)
-May 2021-August 2021
-
-
-PROJECTS
-• Exam Report System | Java, MySQL, NetBeans | [GitHub]
-• Developed a Swing app using Java
-• Use MySQL Server 8 to store data 
-• Use NetBeans to design UI or app
-• Blood Donation Camp Management System | Java, Oracle Database, NetBeans | [GitHub]
-• Developed a Swing app using Java
-• Use Oracle to store data 
-• Use NetBeans to design UI or app
-
-TECHNICAL SKILLS
-• Languages: C, Java, HTML, CSS, JavaScript(Beginner), Python(Beginner)
-• Database: MySQL Server, Oracle
-• Developer Tools: NetBeans, VSCode, Intellij Idea, Git, GitHub
-
-ACHIEVEMENTS AND CERTIFICATIONS
-• Secure 3934 Rank in TCS Codevita International Competition [Certificate]
-• Web Development [Certificate]
-• Oracle Java Explore
-• 1st Rank in Reliance 3D Animation and Adobe Photoshop Workshop [Certificate]
-• 2nd Rank in Inter School Chess Competition 
-*/
 export class Resume{
 
     getHeader(){
-        return `<div class="header"><h1>Gaurav Kumar</h1><hr>
+        return `<div class="header">
+        <h1>Gaurav Kumar</h1><hr>
         <p>
             <span><a href="tel:+919039351758">(+91) 9039351758</a> | </span>
             <span><a href="mailto:gaurav.kumar.deve@gmail.com">gaurav.kumar.deve@gmail.com</a> | </span>
@@ -86,29 +22,137 @@ export class Resume{
                 <h2>EDUCATION</h2><hr>
             </div>
             <div class="education-item">
-                <h3>Chandigarh University</h3>  <h3>Mohali, Punjab</h3>
+                <h4>Chandigarh University</h4>  <h4>Mohali, Punjab</h4>
                 <p>Masters in Computer Application</p>  <p>October 2022–Present</p>
                 <p>Major : Cloud Computing and DevOps | Pursuing </p>
             </div>
             <div class="education-item">
-                <h3>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <h4>Swami Shri Swaroopanand Saraswati Mahavidyalaya</h4> <h3>Durg, Chhattisgarh</h3>
                 <p>Bachelor in Computer Application | 72.7 %</p> <p>July 2017–September 2020</p>
             </div>
             <div class="education-item">
-                <h3>Kendriya Vidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <h4>Kendriya Vidyalaya</h4> <h4>Durg, Chhattisgarh</h4>
                 <p>12th | 66.4 %</p> <p>April 2016–March 2017</p>
             </div>
             <div class="education-item">
-                <h3>Kendriya Vidyalaya</h3> <p>Durg, Chhattisgarh</p>
+                <h4>Kendriya Vidyalaya</h4> <h4>Durg, Chhattisgarh</h4>
                 <p>10th | 8 CGPA</p> <p>April 2014– March 2015</p>
             </div>
         </div>`;
     }
 
+    getProfessionalExperience(){
+        return `<div class="professional-experience">
+            <div>
+                <h2>PROFESSIONAL EXPERIENCE</h2><hr>
+            </div>
+            <div class="professional-experience-item">
+                <h4>
+                    Software Developer Intern 
+                    <a href="https://github.com/Gauravkumar1502/DCIPL-SERVER" target="_blank">[GitHub]</a> 
+                    <a href="https://drive.google.com/file/d/1ASF2FyjKZIxI896C7hCeIMmnsIAeH3ZM/view?usp=share_link" target="_blank">[Certificate]</a></h4> 
+                <h4>Mumbai (WFH)</h4>
+                <p>Dc Ikigai Pvt. Lmt. </p> <p>May 2021-August 2021</p>
+                <ul>
+                    <li>Worked on <strong>Investment Adviser</strong> Project which provides best investment plans and advice according to the user. 
+                        In this project my responsibility was to develop a module to get user data from user and store in <strong>SQL</strong> and perform given criteria to return the best Investment plan</li>
+                    <li>
+                        <strong>Web scraping</strong> for retrieving stock prices using <strong>Puppeteer</strong>.
+                        <a href="https://github.com/Gauravkumar1502/StockPriceScraping" target="_blank">[GitHub]</a>
+                    </li>
+                    <li>
+                        And implement the <strong>Web Scraping in a ChatBot</strong>. 
+                        <a href="https://github.com/Gauravkumar1502/Stock-WebScraping-and-AI-ChatBot" target="_blank">[GitHub]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>`;
+    }
+
+    getProjects(){
+        return `<div class="projects">
+            <div>
+                <h2>PROJECTS</h2><hr>
+            </div>
+            <div class="projects-item">
+                <h4>Personal Terminal Portfolio | HTML, CSS, JavaScript | 
+                    <a href="https://github.com/Gauravkumar1502/Terminal-Portfolio" target="_blank">[GitHub]</a>
+                </h4>
+                <ul>                  
+                    <li>Created this <strong>Personal Terminal-Inspired Portfolio</strong> to demonstrate my proficiency in <strong>backend development</strong>.</li>
+                    <li>Used <strong>Local Storage</strong> to store list of commands.</li> 
+                    <li>Used <strong>Git and GitHub</strong> for version control.</li>
+                    <li>Deployed the application on <strong>GitHub Pages</strong>.</li>
+                </ul>
+            </div>
+            <div class="projects-item">
+                <h4>Exam Report System | Java, MySQL, NetBeans | 
+                    <a href="https://github.com/Gauravkumar1502/JavaSwing/tree/main/JavaSwing/JavaGRProject" target="_blank">[GitHub]</a>
+                </h4>
+                <ul>
+                    <li>Created a system for generating and managing exam reports.</li>
+                    <li>Developed a <strong>Swing</strong> application using <strong>Java</strong>.</li>
+                    <li>Designed the user interface (UI) using NetBeans.</li>
+                    <li>Stored data using MySQL Server 8.</li>
+                </ul>
+            </div>
+            <div class="projects-item">
+                <h4>Blood Donation Camp Management System | Java, Oracle Database, NetBeans |
+                    <a href="https://github.com/Gauravkumar1502/JavaSwing/tree/main/JavaSwing/Blood_Donation" target="_blank">[GitHub]</a>
+                </h4>
+                <ul>
+                    <li>Created a system for managing blood donation camps.</li>
+                    <li>Developed a <strong>Swing</strong> application using <strong>Java</strong>.</li>
+                    <li>Designed the UI using <strong>NetBeans</strong>.</li>
+                    <li>Stored data using <strong>Oracle Database</strong>.</li>
+                </ul>
+            </div>
+        </div>`;
+    }
+    
+    getSkills(){
+        return `<div class="skills">
+            <div>
+                <h2>TECHNICAL SKILLS</h2><hr>
+            </div>
+            <ul>
+                <li><strong>Programming</strong> Languages :</strong> C, Java, HTML, CSS, Python(Intermediate), JavaScript(Intermediate)</li>
+                <li><strong>Frameworks :</strong> Spring</li>
+                <li><strong>Database :</strong> MySQL, Oracle Database</li>
+                <li><strong>Developer Tools :</strong> Git, GitHub, VS Code, NetBeans, IntelliJ IDEA </li>
+                <li><strong>Operating Systems :</strong> Windows, Linux</li>
+            </ul>
+        </div>`;
+    }
+
+    getAchievementsAndCertifications(){
+        return `<div class="achievements-and-certifications">
+            <div>
+                <h2>ACHIEVEMENTS AND CERTIFICATIONS</h2><hr>
+            </div>
+            <ul>
+                <li>
+                    Secured 3934th Rank in <strong>TCS CodeVita International Coding Contest</strong> May 2022.
+                    <a href="https://drive.google.com/file/d/1QsAluBTDIjqz-adsVrdxXZDmQzxVgWxK/view" target="_blank">[Certificate]</a>
+                </li>
+                <li>Web Development. <a href="https://drive.google.com/file/d/1m1c7mE9YeFe5uUCQIFHKLxq2R3Yd5ibM/view" target="_blank">[Certificate]</a></li>
+                <li>Oracle Java Explore.</li>
+                <li>
+                    1st Rank in Reliance <strong>3D Animation and Adobe Photoshop Workshop</strong>. 
+                    <a href="https://drive.google.com/file/d/16WeSdS6W-59s8lSxW6T4jJG1Q-wySQB3/view" target="_blank">[Certificate]</a>
+                </li>
+                <li>2nd Rank in Inter School <strong>Chess Competition</strong>.</li>
+            </ul>
+        </div>`;
+    }
 
     toString(){
         return `${this.getHeader()}
         ${this.getEducation()}
+        ${this.getProfessionalExperience()}
+        ${this.getProjects()}
+        ${this.getSkills()}
+        ${this.getAchievementsAndCertifications()}
         `;
     }
     updateDOM(){
