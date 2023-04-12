@@ -20,6 +20,10 @@ export class Controller{
             case "about":
                 new About().updateDOM();
                 break;
+            case "whoami":
+                new UniversalFunction().updateElement("div", "output",
+                    "The paradox of “Who am I?” is: we never know, but, we constantly find out.");
+                break;
             case "theme":
                 new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;

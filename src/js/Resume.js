@@ -40,7 +40,7 @@ export class Resume{
             return;
         }
     }
-    
+
     downloadFile(fileName){
         const link = document.createElement("a");
         link.href = `/assets/resume/${fileName}`;
@@ -216,5 +216,8 @@ export class Resume{
     }
     displayResume(){
         new UniversalFunction().updateElement("div", "output resume", this.toString());
+        new UniversalFunction().updateElement("div", "output", 
+            `<p>Use <em>resume --download [filetype]</em> to download above resume in the specified format.</p>`
+        );
     }
 }
