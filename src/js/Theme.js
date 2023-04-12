@@ -6,7 +6,7 @@ export class Theme {
         this.options = options;
         this.listOfThemes = ["dark-forest", "dark-ocean", "dark-space", "dark-night",
             "dark-cave", "dark-sea", "light-vanilla", "light-haze", "light-day", "light-sky"];
-        this.cmd = this.parseCommand();
+        this.parseCommand();
     }
 
     parseCommand() {
@@ -53,21 +53,11 @@ export class Theme {
     }
 
     list(value) {
-        if (value !== "") {
-            new UniversalFunction().updateElement("div", "error",
-                `theme --list does not take any arguments.<br>type 'theme --help' for help.`);
-            return;
-        }
         let outMsg = `List of available themes:<br>${this.listOfThemes.join("<br>")}`;
         new UniversalFunction().updateElement("div", "output", outMsg);
     }
 
     help(value) {
-        if (value !== "") {
-            new UniversalFunction().updateElement("div", "error",
-                `theme --help does not take any arguments.<br>type 'theme --help' for help.`);
-            return;
-        }
         let outMsg = `theme: sets the theme of the terminal.<br>
         usage: theme [option] [value]<br>
         options:<br>

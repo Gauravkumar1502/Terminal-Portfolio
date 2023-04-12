@@ -21,7 +21,6 @@ export class Controller{
                 new About().updateDOM();
                 break;
             case "theme":
-                // create new theme object with the rest of the command
                 new Theme(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
             case "history":
@@ -31,7 +30,7 @@ export class Controller{
                 document.querySelector("#terminal").innerHTML = "";
                 break;
             case "resume":
-                new Resume().updateDOM();
+                new Resume(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
             case "exit":
                 new UniversalFunction().updateElement("div", "error", 

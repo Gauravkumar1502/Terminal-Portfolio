@@ -1,6 +1,65 @@
 import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Resume{
+    constructor(options){
+        this.options = options;
+        this.parseCommand();
+    }
+
+    parseCommand(){
+        if(this.options === ""){
+            this.displayResume();
+            return;
+        }
+        let parts = this.options.split(" ");
+        if(parts.length > 2){
+            let errMsg = `resume: too many arguments.<br>type 'resume --help' for help.`;
+            new UniversalFunction().updateElement("div", "error", errMsg);
+            return;
+        }
+        switch(parts[0]){
+            case "--download":
+                this.downloadResume(parts.slice(1).toString());
+                break;
+            case "--help":
+                this.help();
+                break;
+            default:
+                let errMsg = `resume: '${parts[0]}' is not a valid argument.<br>type 'resume --help' for help.`;
+                new UniversalFunction().updateElement("div", "error", errMsg);
+                break;
+        }
+    }
+
+    downloadResume(format){
+        if(format === "" || format === "pdf") this.downloadFile("GauravKumar.pdf");
+        else if(format === "doc") this.downloadFile("GauravKumar.docx");
+        else{
+            let errMsg = `resume: '${format}' is not a valid format.<br>type 'resume --help' for help.`;
+            new UniversalFunction().updateElement("div", "error", errMsg);
+            return;
+        }
+    }
+    
+    downloadFile(fileName){
+        const link = document.createElement("a");
+        link.href = `/assets/resume/${fileName}`;
+        link.setAttribute("download", fileName);
+        link.click();
+        // free memory
+        URL.revokeObjectURL(link.href);
+        link.remove();
+    }
+
+    help() {
+        let outMsg = `resume: Displays or download my resume.<br>
+        usage: resume [option] [value]<br>
+        options:<br>
+        --download [pdf(Default) | doc] downloads my resume in the given format.<br>
+        --help shows this help message.<br>
+        type 'resume' to display my resume.`;
+        new UniversalFunction().updateElement("div", "output", outMsg);
+    }
 
     getHeader(){
         return `<div class="header">
@@ -155,7 +214,7 @@ export class Resume{
         ${this.getAchievementsAndCertifications()}
         `;
     }
-    updateDOM(){
+    displayResume(){
         new UniversalFunction().updateElement("div", "output resume", this.toString());
     }
 }

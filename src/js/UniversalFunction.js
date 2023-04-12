@@ -1,11 +1,11 @@
 export class UniversalFunction{
     updateElement(elementTag, elementClasses, elementContent){
-        let element = document.createElement(elementTag);
+        const  element = document.createElement(elementTag);
         elementClasses.split(" ").forEach((className) => {
             element.classList.add(className);
         });
         element.innerHTML = elementContent;
-        let commandElements = document.getElementsByClassName("command");
+        const  commandElements = document.getElementsByClassName("command");
         commandElements[commandElements.length - 1].appendChild(element);
     }
 }
