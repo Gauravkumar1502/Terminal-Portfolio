@@ -19,7 +19,7 @@ export class Resume{
         }
         switch(parts[0]){
             case "--download":
-                this.downloadResume(parts.slice(1).toString());
+                this.downloadResume(parts.slice(1).toString().trim());
                 break;
             case "--help":
                 this.help();
@@ -32,8 +32,8 @@ export class Resume{
     }
 
     downloadResume(format){
-        if(format === "" || format === "pdf") this.downloadFile("GauravKumar.pdf");
-        else if(format === "doc") this.downloadFile("GauravKumar.docx");
+        if(format === "" || format === "pdf") this.downloadFile("GauravKumar_Resume.pdf");
+        else if(format === "doc") this.downloadFile("GauravKumar_Resume.docx");
         else{
             let errMsg = `resume: '${format}' is not a valid format.<br>type 'resume --help' for help.`;
             new UniversalFunction().updateElement("div", "error", errMsg);
