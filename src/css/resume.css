@@ -22,9 +22,8 @@ a{
     padding: 0 .4rem 0 .4rem;
 }
 a:hover, a:focus{
-    text-shadow: 0 0 .3rem var(--color-text);
-    /* background-color: var(--color-terminal-text); */
-    background-color: var(--color-text);
+    /* background-color: var(--color-text); */
+    background-color: var(--color-terminal-text);
     color: var(--color-background);         
 }
 strong{

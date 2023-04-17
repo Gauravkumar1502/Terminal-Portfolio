@@ -1,19 +1,21 @@
-import {Theme} from "./Theme.js";
+import { Theme } from "./Theme.js";
 import { About } from "./About.js";
 import { Help } from "./Help.js";
 import { History } from "./History.js";
 import { Resume } from "./Resume.js";
+import { Connect } from "./Connect.js";
+import { Contact } from "./Contact.js";
 import { UniversalFunction } from "./UniversalFunction.js";
 
-export class Controller{
-    constructor(InputedCommand){ 
+export class Controller {
+    constructor(InputedCommand) {
         this.InputedCommand = InputedCommand;
         this.parseCommand();
     }
 
-    parseCommand(){
+    parseCommand() {
         let cmd = this.InputedCommand.split(" ")[0].toLowerCase();
-        switch(cmd){
+        switch (cmd) {
             case "help":
                 new Help().updateDOM();
                 break;
@@ -30,15 +32,21 @@ export class Controller{
             case "history":
                 new History().updateDOM();
                 break;
-            case "clear":
-                document.querySelector("#terminal").innerHTML = "";
-                break;
             case "resume":
                 new Resume(this.InputedCommand.substring(cmd.length).trim().toLowerCase());
                 break;
+            case "connect":
+                new Connect().updateDOM();
+                break;
+            case "contact":
+                new Contact().updateDOM();
+                break;
+            case "clear":
+                document.querySelector("#terminal").innerHTML = "";
+                break;
             case "exit":
-                new UniversalFunction().updateElement("div", "error", 
-                "Due to security reasons, you can't close this window using the 'exit' command.");
+                new UniversalFunction().updateElement("div", "error",
+                    "Due to security reasons, you can't close this window using the 'exit' command.");
                 // window.open(location, '_self').close();
                 // window.close();
                 break;
