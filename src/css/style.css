@@ -14,11 +14,10 @@ body, input{
     font-family: 'FiraCode Nerd Font', sans-serif, 'Courier New', Courier, monospace;
 }
 main{
-    /* height: 100dvh;
-    width: 100dvw; */
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    scroll-behavior: smooth;
 }
 .version{
     font-size: clamp(8px, .9vw, 20px);
@@ -28,7 +27,7 @@ main{
     display: flex;
     flex-direction: row;
     align-items: end;
-    gap: 2vw;
+    gap: min(2rem,2vw);
 }
 .art, .name{
     font-family: 'Courier New', Courier, monospace;
@@ -49,7 +48,7 @@ main{
 .terminal{
     display: flex;
     flex-direction: column;
-    gap: 2dvh;
+    gap: min(2rem,2vh);
 }
 .line1{
     display: flex;
@@ -80,7 +79,7 @@ main{
 }
 .output, .error{
     font-weight: 80;
-    padding: 1dvh 2dvw;
+    padding: 1rem 2rem;
     font-size: var(--font-size);
 }
 .error{

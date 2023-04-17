@@ -45,8 +45,10 @@ function addCommand() {
       }
       // remove previous event listener
       commandInput.onkeydown = null;
+      commandInput.setAttribute("tabindex", "-1");
       commandInput.removeAttribute("id");
       history.resetIndex();
+
       addCommand();
     }else if(event.key === "ArrowUp"){
       history.up();

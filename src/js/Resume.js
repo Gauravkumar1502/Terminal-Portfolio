@@ -69,7 +69,7 @@ export class Resume{
             <span><a href="mailto:gaurav.kumar.deve@gmail.com">gaurav.kumar.deve@gmail.com</a> | </span>
             <span><a href="https://gauravkumar1502.github.io/Terminal-Portfolio/" target="_blank">CLI-Portfolio</a> | </span>
             <span><a href="https://github.com/Gauravkumar1502" target="_blank">GitHub</a> | </span>
-            <span><a href="https://www.linkedin.com/in/gaurav-kumar-1518281a4/" target="_blank">LinkedIn</a> | </span>
+            <span><a href="https://www.linkedin.com/in/gaurav-kumar-3b9132154/" target="_blank">LinkedIn</a> | </span>
             <span><a href="https://leetcode.com/GauravKumar15/" target="_blank">Leetcode</a></span>
         </p><hr>
         </div>`;
