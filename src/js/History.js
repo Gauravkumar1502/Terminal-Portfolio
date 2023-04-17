@@ -7,6 +7,9 @@ export class History{
     }
 
     add(command){
+        if(this.history.length > 0 && this.history[this.history.length-1] === command){
+            return;
+        }
         this.history.push(command);
         this.index++;
         localStorage.setItem('history', JSON.stringify(this.history));
