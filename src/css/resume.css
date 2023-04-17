@@ -18,10 +18,14 @@ hr{
 a{
     color: var(--color-text);
     text-decoration: underline;
-    font-weight: 900; 
+    font-weight: 900;       
+    padding: 0 .4rem 0 .4rem;
 }
-a:hover{
+a:hover, a:focus{
     text-shadow: 0 0 .3rem var(--color-text);
+    /* background-color: var(--color-terminal-text); */
+    background-color: var(--color-text);
+    color: var(--color-background);         
 }
 strong{
     font-weight: 900;
