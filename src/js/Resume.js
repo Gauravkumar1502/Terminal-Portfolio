@@ -43,7 +43,7 @@ export class Resume{
 
     downloadFile(fileName){
         const link = document.createElement("a");
-        link.href = `/assets/resume/${fileName}`;
+        link.href = `assets/resume/${fileName}`;
         link.setAttribute("download", fileName);
         link.click();
         // free memory
