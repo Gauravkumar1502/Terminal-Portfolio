@@ -1,4 +1,4 @@
-import commands  from '../../data/Commands.json' assert { type: "json" };
+import commands  from '../../data/Commands.json';
 import { UniversalFunction } from "./UniversalFunction.js";
 
 export class Help{
